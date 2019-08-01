@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	/*	alert("Comecemos a luta...");
+		prompt("Insira um valor: ");
+		confirm("blz?");
+		console.log("Teste");
+    function troca( ) {
+       document.getElementById("tit1").innerHTML=
+       "Bem-Vindo!!!";
+     } 
+     function escrever(){
+     	tit3.innerHTML=nome.value;
+     }
+	*/
+	function media(n1){
+		var n=Number(n1);
+
+		if (n>=9) {
+			imprimir="E";
+		}else{
+			if (n<6) {
+				imprimir="C";
+			} else {
+				if (n>=6 && n < 7.5) {
+					imprimir="B";
+				}else
+				imprimir="A";
+			}
+		}
+		document.getElementById("resultado").innerHTML=imprimir;
+	}
+	function ferias(){
+		esperados= Math.round((new Date("Oct 12 2019") - new Date())/1000/60/60/24);
+		document.getElementById("dias_ferias").innerHTML="faltam "+esperados+" dias";
+	}
+ </script>
+</head>
+<body>
+<!-- 
+ <h1 id="tit1" onclick="troca( );">Clique-me!</h1>
+ Nome: <input type="text" id="nome" size="30" onchange="escrever();"/>
+ <h3 id="tit3"></h3>
+<script type="text/javascript">
+ 	var x = 30;
+	document.write(x);
+	var w = 3 * 2;
+	document.write(w);
+ 	var y = x / w;
+ 	document.write(y);
+ 	var z = y++ +2;
+ 	document.write(z);
+ 	--z;
+ 	resp = (z==7) ? "S" : "N";
+ 	document.write(resp);
+</script>-->
+	<input type="text" id="nota" onchange="media(this.value);"/>
+	<h1 id="resultado">...teste...</h1>
+	<p id="dias_ferias" onclick="ferias()">para as ferias clique aqui</p>
+</body>
+
+</html>
